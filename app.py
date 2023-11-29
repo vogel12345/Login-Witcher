@@ -83,11 +83,13 @@ def login():
     username = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
 
-     if st.button("Iniciar sesión"):
+    if st.button("Iniciar sesión"):
         if username in usuarios and usuarios[username] == password:
             st.success(f"Bienvenido, {username}!")
-            if st.button("Ir al Dashboard"):
-                st.markdown("[Ir al Dashboard](https://witcher-dash.streamlit.app/)", unsafe_allow_html=True)
+            st.success(f"Puedes ingresar desde el siguiente link:")
+            # Mostrar enlace al Dashboard
+            st.markdown("[Ir al Dashboard](https://witcher-dash.streamlit.app/)", unsafe_allow_html=True)
+            
             return True
         else:
             st.error("Credenciales incorrectas. Por favor, inténtalo de nuevo.")
