@@ -80,7 +80,7 @@ def register():
 # Función de inicio de sesión
 def login():
     st.subheader("Inicio de sesión")
-    username = st.text_input("Usuario")
+    username = st.text_input("Correo Electrónico")
     password = st.text_input("Contraseña", type="password")
 
     if st.button("Iniciar sesión"):
